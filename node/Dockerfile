@@ -6,6 +6,4 @@ RUN gem install sass compass
 
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.23.2
 
-RUN export PATH=$HOME/.yarn/bin:$PATH
-
-RUN yarn global add grunt-cli bower
+RUN $HOME/.yarn/bin/yarn global add grunt-cli bower
