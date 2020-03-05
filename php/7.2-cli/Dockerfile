@@ -1,6 +1,6 @@
 FROM php:7.2-cli
 
-RUN apt-get update && apt-get install -y zlib1g-dev libicu-dev unzip apt-transport-https gnupg wget git
+RUN apt-get update && apt-get install -y zlib1g-dev libicu-dev unzip apt-transport-https gnupg wget git zip
 RUN docker-php-ext-install intl zip pdo pdo_mysql
 RUN wget https://nodejs.org/download/release/v8.16.0/node-v8.16.0-linux-x64.tar.gz
 RUN mkdir -p /opt/nodejs && tar -xvzf node-v8.16.0-linux-x64.tar.gz -C /opt/nodejs
